@@ -1,0 +1,580 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(235, 240, 247, 0.90),
+            rgba(235, 240, 247, 0.90)
+        ),
+        url("img/escuela.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 35px 0;
+}
+
+
+
+/* =========================================
+   DECORACIONES
+========================================= */
+
+.decoracion {
+
+    position: fixed;
+
+    width: 350px;
+    height: 30px;
+
+    transform: rotate(-45deg);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Superior */
+
+.decoracion-superior {
+
+    background: #8d1d3b;
+
+    top: 45px;
+    left: -70px;
+
+    box-shadow:
+        0 -18px 0 #173d70;
+}
+
+
+/* Inferior */
+
+.decoracion-inferior {
+
+    background: #8d1d3b;
+
+    bottom: 45px;
+    right: -70px;
+
+    box-shadow:
+        0 -18px 0 #173d70;
+}
+
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.login-container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    padding: 30px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    padding: 42px 55px;
+
+    border-radius: 15px;
+
+    border: 1px solid #d3dce8;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+.register-box {
+
+    max-width: 850px;
+}
+
+
+.recovery-box {
+
+    max-width: 500px;
+}
+
+
+
+/* =========================================
+   OCULTAR ELEMENTOS
+========================================= */
+
+.oculto {
+    display: none;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-container {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: -15px;
+}
+
+
+.logo {
+
+    width: 100px;
+    height: 125px;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.login-box h1 {
+
+    color: #173d70;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.register-box h1 {
+
+    font-size: 38px;
+}
+
+
+.recovery-box h1 {
+
+    font-size: 31px;
+}
+
+
+.subtitle {
+
+    color: #59687a;
+
+    font-size: 21px;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* =========================================
+   SEPARADOR
+========================================= */
+
+.separador {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #d9dee5;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* =========================================
+   GRID DEL REGISTRO
+========================================= */
+
+.register-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 25px;
+}
+
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.input-group {
+
+    text-align: left;
+
+    margin-bottom: 24px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    color: #3c506b;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+.input-group label i {
+
+    color: #173d70;
+
+    margin-right: 8px;
+
+    width: 20px;
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 17px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #34445a;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.input-group input::placeholder {
+
+    color: #7c899b;
+}
+
+
+.input-group input:focus {
+
+    outline: none;
+
+    border-color: #173d70;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 61, 112, 0.10);
+}
+
+
+
+/* =========================================
+   CONTRASEÑA
+========================================= */
+
+.password-container {
+
+    position: relative;
+}
+
+
+.password-container input {
+
+    padding-right: 55px;
+}
+
+
+.eye-button {
+
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    padding: 5px;
+}
+
+
+.eye-button:hover {
+
+    color: #173d70;
+}
+
+
+
+/* =========================================
+   OLVIDÉ CONTRASEÑA
+========================================= */
+
+.forgot-password-container {
+
+    text-align: right;
+
+    margin-top: -10px;
+
+    margin-bottom: 22px;
+}
+
+
+.forgot-password-container a {
+
+    color: #174a82;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.forgot-password-container a:hover {
+
+    text-decoration: underline;
+}
+
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.login-button {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #174a82;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.login-button:hover {
+
+    background: #123b69;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(23, 61, 112, 0.25);
+}
+
+
+.login-button i {
+
+    font-size: 18px;
+}
+
+
+
+/* =========================================
+   REGISTRO / REGRESAR
+========================================= */
+
+.register-container {
+
+    margin-top: 30px;
+
+    color: #59687a;
+}
+
+
+.register-container p {
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+
+.register-container a {
+
+    color: #174a82;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+.register-container a:hover {
+
+    text-decoration: underline;
+}
+
+
+.register-container a i {
+
+    margin-right: 7px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    body {
+
+        align-items: flex-start;
+
+        padding: 20px 0;
+    }
+
+
+    .login-container {
+
+        padding: 15px;
+    }
+
+
+    .login-box {
+
+        padding: 30px 25px;
+    }
+
+
+    .register-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .logo {
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .login-box h1 {
+
+        font-size: 32px;
+    }
+
+
+    .register-box h1 {
+
+        font-size: 30px;
+    }
+
+
+    .recovery-box h1 {
+
+        font-size: 27px;
+    }
+
+
+    .subtitle {
+
+        font-size: 18px;
+    }
+
+}

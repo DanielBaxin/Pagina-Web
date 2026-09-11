@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CBTis 227 | Sistema de Inscripciones y Reinscripciones
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- Decoraciones -->
+    <div class="decoracion decoracion-superior"></div>
+    <div class="decoracion decoracion-inferior"></div>
+
+
+    <!-- =========================================
+         CONTENEDOR PRINCIPAL
+    ========================================== -->
+
+    <main class="login-container">
+
+
+        <!-- =========================================
+             LOGIN
+        ========================================== -->
+
+        <section class="login-box" id="loginBox">
+
+            <!-- Logo -->
+            <div class="logo-container">
+
+                <img
+                    src= "img/Logo.png"
+                    alt="Logo CBTis 227"
+                    class="logo"
+                >
+
+            </div>
+
+
+            <!-- Título -->
+
+            <h1>CBTis 227</h1>
+
+            <p class="subtitle">
+                Sistema de Inscripciones y Reinscripciones
+            </p>
+
+            <div class="separador"></div>
+
+
+            <!-- Formulario -->
+
+            <form id="loginForm">
+
+
+                <!-- Correo -->
+
+                <div class="input-group">
+
+                    <label for="correo">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        Correo electrónico
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        placeholder="usuario@ejemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Contraseña -->
+
+                <div class="input-group">
+
+                    <label for="password">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Contraseña
+
+                    </label>
+
+
+                    <div class="password-container">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Ingresa tu contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="mostrarPassword"
+                            class="eye-button"
+                            aria-label="Mostrar contraseña"
+                        >
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Olvidé contraseña -->
+
+                <div class="forgot-password-container">
+
+                    <a href="#" id="olvidePassword">
+
+                        ¿Olvidaste tu contraseña?
+
+                    </a>
+
+                </div>
+
+
+                <!-- Botón -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    INICIAR SESIÓN
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- Registro -->
+
+            <div class="register-container">
+
+                <p>
+                    ¿No tienes una cuenta?
+                </p>
+
+                <a href="#" id="registro">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    REGÍSTRATE
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             REGISTRO DE ESTUDIANTE
+        ========================================== -->
+
+        <section
+            class="login-box register-box oculto"
+            id="registerBox"
+        >
+
+            <!-- Logo -->
+
+            <div class="logo-container">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjytI9ij9VeoZIiEiljf97n9qpXUFrq2JuwOZpHqAlJpX2OT_bt-msylMM&s=10"
+                    alt="Logo CBTis 227"
+                    class="logo"
+                >
+
+            </div>
+
+
+            <h1>Registro</h1>
+
+            <p class="subtitle">
+                Crear cuenta de estudiante
+            </p>
+
+            <div class="separador"></div>
+
+
+            <form id="registerForm">
+
+                <div class="register-grid">
+
+
+                    <!-- Nombre -->
+
+                    <div class="input-group">
+
+                        <label for="nombre">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Nombre
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ingresa tu nombre"
+                            autocomplete="given-name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Apellido paterno -->
+
+                    <div class="input-group">
+
+                        <label for="apellidoPaterno">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Apellido paterno
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellidoPaterno"
+                            placeholder="Apellido paterno"
+                            autocomplete="family-name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Apellido materno -->
+
+                    <div class="input-group">
+
+                        <label for="apellidoMaterno">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            Apellido materno
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellidoMaterno"
+                            placeholder="Apellido materno"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CURP -->
+
+                    <div class="input-group">
+
+                        <label for="curp">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            CURP
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="curp"
+                            placeholder="18 caracteres"
+                            maxlength="18"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Número de control -->
+
+                    <div class="input-group">
+
+                        <label for="numeroControl">
+
+                            <i class="fa-solid fa-hashtag"></i>
+
+                            Número de control
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="numeroControl"
+                            placeholder="Número de control"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Correo -->
+
+                    <div class="input-group">
+
+                        <label for="correoRegistro">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            Correo electrónico
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correoRegistro"
+                            placeholder="usuario@ejemplo.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Contraseña -->
+
+                    <div class="input-group">
+
+                        <label for="passwordRegistro">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            Contraseña
+
+                        </label>
+
+                        <input
+                            type="password"
+                            id="passwordRegistro"
+                            placeholder="Mínimo 6 caracteres"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Confirmar contraseña -->
+
+                    <div class="input-group">
+
+                        <label for="confirmarPassword">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            Confirmar contraseña
+
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmarPassword"
+                            placeholder="Repite tu contraseña"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Crear cuenta -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    CREAR CUENTA
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- Regresar -->
+
+            <div class="register-container">
+
+                <a href="#" id="volverLogin">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    VOLVER AL INICIO DE SESIÓN
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             RECUPERAR CONTRASEÑA
+        ========================================== -->
+
+        <section
+            class="login-box recovery-box oculto"
+            id="recoveryBox"
+        >
+
+            <!-- Logo -->
+
+            <div class="logo-container">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjytI9ij9VeoZIiEiljf97n9qpXUFrq2JuwOZpHqAlJpX2OT_bt-msylMM&s=10"
+                    alt="Logo CBTis 227"
+                    class="logo"
+                >
+
+            </div>
+
+
+            <h1>Recuperar contraseña</h1>
+
+            <p class="subtitle">
+                Ingresa los datos de tu cuenta
+            </p>
+
+            <div class="separador"></div>
+
+
+            <form id="recoveryForm">
+
+
+                <!-- Correo -->
+
+                <div class="input-group">
+
+                    <label for="correoRecuperacion">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        Correo electrónico
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correoRecuperacion"
+                        placeholder="usuario@ejemplo.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Nueva contraseña -->
+
+                <div class="input-group">
+
+                    <label for="nuevaPassword">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Nueva contraseña
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="nuevaPassword"
+                        placeholder="Mínimo 6 caracteres"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Confirmar contraseña -->
+
+                <div class="input-group">
+
+                    <label for="confirmarNuevaPassword">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Confirmar nueva contraseña
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarNuevaPassword"
+                        placeholder="Repite tu nueva contraseña"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Actualizar -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+
+                    ACTUALIZAR CONTRASEÑA
+
+                    <i class="fa-solid fa-key"></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- Regresar -->
+
+            <div class="register-container">
+
+                <a
+                    href="#"
+                    id="volverLoginRecuperacion"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    VOLVER AL INICIO DE SESIÓN
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
